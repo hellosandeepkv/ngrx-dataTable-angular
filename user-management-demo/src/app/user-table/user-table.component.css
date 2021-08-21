@@ -1,0 +1,22 @@
+.card {
+  margin-top: 25px;
+  width: 75%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+.wrapper {
+  font-size: 13px !important;
+}
