@@ -113,14 +113,14 @@ export class UserTableComponent implements OnInit, OnDestroy, AfterViewInit {
     this.loadUsers();
   }
 
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * users.length);
-    this.dataSource.push(users[randomElementIndex]);
-    this.table.renderRows();
-  }
+  // addData() {
+  //   const randomElementIndex = Math.floor(Math.random() * users.length);
+  //   this.dataSource.push(users[randomElementIndex]);
+  //   this.table.renderRows();
+  // }
 
-  removeData() {
-    this.dataSource.pop();
-    this.table.renderRows();
-  }
+  // removeData() {
+  //   this.dataSource.pop();
+  //   this.table.renderRows();
+  // }
 }

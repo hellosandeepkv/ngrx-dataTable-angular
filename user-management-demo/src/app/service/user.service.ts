@@ -16,17 +16,13 @@ export class UserService {
     let data = <UserDataInterface[]>[];
 
     data = users.filter(
-      (u) =>
-        ~u.Role.toLocaleLowerCase().indexOf(params.filter) ||
-        ~u.FullName.toLocaleLowerCase().indexOf(params.filter) ||
-        ~u.Country.toLocaleLowerCase().indexOf(params.filter)
+      (c) =>
+        ~c.Role.toLocaleLowerCase().indexOf(params.filter) ||
+        ~c.FullName.toLocaleLowerCase().indexOf(params.filter) ||
+        ~c.Country.toLocaleLowerCase().indexOf(params.filter)
     );
 
-    // data.sort(
-    //   (a, b) =>
-    //     (a[params.sortField] > b[params.sortField] > ? 1 : -1) *
-    //     (params.sortDirection === 'asc' ? 1 : -1)
-    // );
+   // data.sort((a, b) => (a[params.sortField] > b[params.sortField] ? 1 : -1) * (params.sortDirection === "asc" ? 1 : -1)); 
 
     return {
       total: data.length,
@@ -39,704 +35,179 @@ export class UserService {
 }
 
 const users = <UserDataInterface[]>[
-  {
+  <UserDataInterface>{
     Id: 1,
     FullName: 'Violette Zute',
     Country: 'Spain',
     Role: 'Media Manager IV',
     Email: 'vzute0@oakley.com',
   },
-  {
+  <UserDataInterface>{
     Id: 2,
     FullName: 'Margarete McRuvie',
     Country: 'Liberia',
     Role: 'Safety Technician III',
     Email: 'mmcruvie1@quantcast.com',
   },
-  {
+  <UserDataInterface>{
     Id: 3,
     FullName: 'Karoly Holley',
     Country: 'Kiribati',
     Role: 'Legal Assistant',
     Email: 'kholley2@abc.net.au',
   },
-  {
+  <UserDataInterface>{
     Id: 4,
     FullName: 'Idalina Holleworth',
     Country: 'China',
     Role: 'Food Chemist',
     Email: 'iholleworth3@usgs.gov',
   },
-  {
+  <UserDataInterface>{
     Id: 5,
     FullName: 'Blinnie Kalinke',
     Country: 'France',
     Role: 'Senior Editor',
     Email: 'bkalinke4@booking.com',
   },
-  {
+  <UserDataInterface>{
     Id: 6,
     FullName: 'Gerik BIddy',
     Country: 'Sweden',
     Role: 'Senior Financial Analyst',
     Email: 'gbIddy5@nature.com',
   },
-  {
+  <UserDataInterface>{
     Id: 7,
     FullName: 'Lefty Labrom',
     Country: 'Sweden',
     Role: 'Financial Advisor',
     Email: 'llabrom6@360.cn',
   },
-  {
+  <UserDataInterface>{
     Id: 8,
     FullName: 'Lucita Thorne',
     Country: 'Philippines',
     Role: 'VP Quality Control',
     Email: 'lthorne7@netscape.com',
   },
-  {
+  <UserDataInterface>{
     Id: 9,
     FullName: 'Vlad Turneux',
     Country: 'Vietnam',
     Role: 'Database Administrator II',
     Email: 'vturneux8@newsvine.com',
   },
-  {
+  <UserDataInterface>{
     Id: 10,
     FullName: 'Jobyna Hobben',
     Country: 'China',
     Role: 'Financial Advisor',
     Email: 'jhobben9@google.fr',
   },
-  {
+  <UserDataInterface>{
     Id: 11,
     FullName: 'Rakel King',
     Country: 'China',
     Role: 'VP Quality Control',
     Email: 'rkinga@theguardian.com',
   },
-  {
+  <UserDataInterface>{
     Id: 12,
     FullName: 'Angelica Tommaseo',
     Country: 'China',
     Role: 'Legal Assistant',
     Email: 'atommaseob@ifeng.com',
   },
-  {
+  <UserDataInterface>{
     Id: 13,
     FullName: 'Prescott Sellen',
     Country: 'Palestinian Territory',
     Role: 'Legal Assistant',
     Email: 'psellenc@privacy.gov.au',
   },
-  {
+  <UserDataInterface>{
     Id: 14,
     FullName: 'Adrianne Jewers',
     Country: 'Brazil',
     Role: 'Health Coach IV',
     Email: 'ajewersd@nationalgeographic.com',
   },
-  {
+  <UserDataInterface>{
     Id: 15,
     FullName: 'Conrado Ciccarello',
     Country: 'Russia',
     Role: 'Data Coordiator',
     Email: 'cciccarelloe@slashdot.org',
   },
-  {
+  <UserDataInterface>{
     Id: 16,
     FullName: 'Carrol Alban',
     Country: 'Czech Republic',
     Role: 'Database Administrator II',
     Email: 'calbanf@jugem.jp',
   },
-  {
+  <UserDataInterface>{
     Id: 17,
     FullName: 'Katie Briatt',
     Country: 'Portugal',
     Role: 'Paralegal',
     Email: 'kbriattg@tmall.com',
   },
-  {
+  <UserDataInterface>{
     Id: 18,
     FullName: 'Ingelbert Tremoulet',
     Country: 'Russia',
     Role: 'Compensation Analyst',
     Email: 'itremouleth@mediafire.com',
   },
-  {
+  <UserDataInterface>{
     Id: 19,
     FullName: 'Warren holmes',
     Country: 'Czech Republic',
     Role: 'Project Manager',
     Email: 'wholmesi@bbb.org',
   },
-  {
+  <UserDataInterface> {
     Id: 20,
     FullName: 'Armin Ellum',
     Country: 'Nicaragua',
     Role: 'Account Representative II',
     Email: 'aellumj@sciencedirect.com',
   },
-  {
+  <UserDataInterface>{
     Id: 21,
     FullName: 'Averyl Wey',
     Country: 'Mexico',
     Role: 'Editor',
     Email: 'aweyk@pcworld.com',
   },
-  {
+  <UserDataInterface>{
     Id: 22,
     FullName: 'Lewiss Vahl',
     Country: 'France',
     Role: 'Biostatistician IV',
     Email: 'lvahll@mac.com',
   },
-  {
+  <UserDataInterface>{
     Id: 23,
     FullName: 'Boniface Bernardino',
     Country: 'Czech Republic',
     Role: 'GIS Technical Architect',
     Email: 'bbernardinom@wp.com',
   },
-  {
+  <UserDataInterface>{
     Id: 24,
     FullName: 'Wiley Agron',
     Country: 'France',
     Role: 'Data Coordiator',
     Email: 'wagronn@sohu.com',
   },
-  {
+  <UserDataInterface>{
     Id: 25,
     FullName: 'Sancho Torbet',
     Country: 'China',
     Role: 'Software Test Engineer IV',
     Email: 'storbeto@seesaa.net',
-  },
-  {
-    Id: 26,
-    FullName: 'Zedekiah Chartre',
-    Country: 'Czech Republic',
-    Role: 'Environmental Specialist',
-    Email: 'zchartrep@nhs.uk',
-  },
-  {
-    Id: 27,
-    FullName: 'Allissa Bartkowiak',
-    Country: 'Ukraine',
-    Role: 'Human Resources Manager',
-    Email: 'abartkowiakq@drupal.org',
-  },
-  {
-    Id: 28,
-    FullName: 'Priscella Schwier',
-    Country: 'Venezuela',
-    Role: 'Environmental Tech',
-    Email: 'pschwierr@example.com',
-  },
-  {
-    Id: 29,
-    FullName: 'Ertha Helian',
-    Country: 'Uganda',
-    Role: 'Information Systems Manager',
-    Email: 'ehelians@dot.gov',
-  },
-  {
-    Id: 30,
-    FullName: 'Mirna Polson',
-    Country: 'Indonesia',
-    Role: 'Assistant Manager',
-    Email: 'mpolsont@dropbox.com',
-  },
-  {
-    Id: 31,
-    FullName: 'Garrot Arter',
-    Country: 'Portugal',
-    Role: 'Statistician IV',
-    Email: 'garteru@nbcnews.com',
-  },
-  {
-    Id: 32,
-    FullName: 'Barny Broadnicke',
-    Country: 'France',
-    Role: 'Health Coach III',
-    Email: 'bbroadnickev@blogs.com',
-  },
-  {
-    Id: 33,
-    FullName: 'Timmi Molloy',
-    Country: 'Russia',
-    Role: 'Financial Analyst',
-    Email: 'tmolloyw@nbcnews.com',
-  },
-  {
-    Id: 34,
-    FullName: 'Cord Impson',
-    Country: 'France',
-    Role: 'Biostatistician II',
-    Email: 'cimpsonx@un.org',
-  },
-  {
-    Id: 35,
-    FullName: 'Terencio McBrearty',
-    Country: 'Philippines',
-    Role: 'Database Administrator III',
-    Email: 'tmcbreartyy@ft.com',
-  },
-  {
-    Id: 36,
-    FullName: 'Letisha Forsbey',
-    Country: 'Bolivia',
-    Role: 'Research Assistant III',
-    Email: 'lforsbeyz@phpbb.com',
-  },
-  {
-    Id: 37,
-    FullName: 'Bernadina Hoyland',
-    Country: 'Bangladesh',
-    Role: 'Physical Therapy Assistant',
-    Email: 'bhoyland10@answers.com',
-  },
-  {
-    Id: 38,
-    FullName: 'Jaye Negal',
-    Country: 'China',
-    Role: 'Account Coordinator',
-    Email: 'jnegal11@admin.ch',
-  },
-  {
-    Id: 39,
-    FullName: 'Maddy Papa',
-    Country: 'China',
-    Role: 'Computer Systems Analyst IV',
-    Email: 'mpapa12@usnews.com',
-  },
-  {
-    Id: 40,
-    FullName: 'Donavon Robic',
-    Country: 'Jordan',
-    Role: 'Research Assistant III',
-    Email: 'drobic13@hud.gov',
-  },
-  {
-    Id: 41,
-    FullName: 'My Schurig',
-    Country: 'Thailand',
-    Role: 'Recruiting Manager',
-    Email: 'mschurig14@google.co.uk',
-  },
-  {
-    Id: 42,
-    FullName: 'Agretha Ruppel',
-    Country: 'Poland',
-    Role: 'Environmental Specialist',
-    Email: 'aruppel15@howstuffworks.com',
-  },
-  {
-    Id: 43,
-    FullName: 'Lou Gaskoin',
-    Country: 'Canada',
-    Role: 'Senior Sales Associate',
-    Email: 'lgaskoin16@godaddy.com',
-  },
-  {
-    Id: 44,
-    FullName: 'Sherrie Gyppes',
-    Country: 'China',
-    Role: 'Junior Executive',
-    Email: 'sgyppes17@amazon.de',
-  },
-  {
-    Id: 45,
-    FullName: 'Libbey Olek',
-    Country: 'Indonesia',
-    Role: 'Web Developer III',
-    Email: 'lolek18@loc.gov',
-  },
-  {
-    Id: 46,
-    FullName: 'Lilian Smullin',
-    Country: 'Portugal',
-    Role: 'Web Developer IV',
-    Email: 'lsmullin19@sohu.com',
-  },
-  {
-    Id: 47,
-    FullName: 'Dulcea Haugen',
-    Country: 'Macedonia',
-    Role: 'VP Sales',
-    Email: 'dhaugen1a@answers.com',
-  },
-  {
-    Id: 48,
-    FullName: 'Clement Allkins',
-    Country: 'China',
-    Role: 'Design Engineer',
-    Email: 'callkins1b@usgs.gov',
-  },
-  {
-    Id: 49,
-    FullName: 'Whitman Burrill',
-    Country: 'Peru',
-    Role: 'Staff Scientist',
-    Email: 'wburrill1c@pagesperso-orange.fr',
-  },
-  {
-    Id: 50,
-    FullName: 'Emmet Worts',
-    Country: 'Indonesia',
-    Role: 'Sales Associate',
-    Email: 'eworts1d@umn.edu',
-  },
-  {
-    Id: 51,
-    FullName: 'Taylor Riggert',
-    Country: 'China',
-    Role: 'Research Associate',
-    Email: 'triggert1e@nih.gov',
-  },
-  {
-    Id: 52,
-    FullName: 'Audie Maccrie',
-    Country: 'Philippines',
-    Role: 'Technical Writer',
-    Email: 'amaccrie1f@scientificamerican.com',
-  },
-  {
-    Id: 53,
-    FullName: 'Nari Pietrusiak',
-    Country: 'Ireland',
-    Role: 'Occupational Therapist',
-    Email: 'npietrusiak1g@ftc.gov',
-  },
-  {
-    Id: 54,
-    FullName: 'Jany Huller',
-    Country: 'France',
-    Role: 'Human Resources Manager',
-    Email: 'jhuller1h@arstechnica.com',
-  },
-  {
-    Id: 55,
-    FullName: 'Dov Jurczik',
-    Country: 'Sweden',
-    Role: 'Developer IV',
-    Email: 'djurczik1i@1688.com',
-  },
-  {
-    Id: 56,
-    FullName: 'Bryna Witchell',
-    Country: 'Madagascar',
-    Role: 'Associate Professor',
-    Email: 'bwitchell1j@woothemes.com',
-  },
-  {
-    Id: 57,
-    FullName: 'Cherey Rixon',
-    Country: 'Indonesia',
-    Role: 'Food Chemist',
-    Email: 'crixon1k@mozilla.org',
-  },
-  {
-    Id: 58,
-    FullName: 'Leighton Crotch',
-    Country: 'China',
-    Role: 'Electrical Engineer',
-    Email: 'lcrotch1l@live.com',
-  },
-  {
-    Id: 59,
-    FullName: 'Lindsay Laraway',
-    Country: 'Philippines',
-    Role: 'Administrative Assistant II',
-    Email: 'llaraway1m@chron.com',
-  },
-  {
-    Id: 60,
-    FullName: 'Emmet Bane',
-    Country: 'China',
-    Role: 'Research Associate',
-    Email: 'ebane1n@dot.gov',
-  },
-  {
-    Id: 61,
-    FullName: 'Shari McCarthy',
-    Country: 'China',
-    Role: 'Account Representative III',
-    Email: 'smccarthy1o@mayoclinic.com',
-  },
-  {
-    Id: 62,
-    FullName: 'Simon Kupec',
-    Country: 'Indonesia',
-    Role: 'Food Chemist',
-    Email: 'skupec1p@rediff.com',
-  },
-  {
-    Id: 63,
-    FullName: 'Moore Heinsen',
-    Country: 'Philippines',
-    Role: 'Administrative Assistant I',
-    Email: 'mheinsen1q@e-recht24.de',
-  },
-  {
-    Id: 64,
-    FullName: 'Seline Botwood',
-    Country: 'Portugal',
-    Role: 'Marketing Manager',
-    Email: 'sbotwood1r@chron.com',
-  },
-  {
-    Id: 65,
-    FullName: 'Fabiano Pithcock',
-    Country: 'Philippines',
-    Role: 'Clinical Specialist',
-    Email: 'fpithcock1s@army.mil',
-  },
-  {
-    Id: 66,
-    FullName: 'Paulie Nitto',
-    Country: 'Argentina',
-    Role: 'Software Consultant',
-    Email: 'pnitto1t@google.es',
-  },
-  {
-    Id: 67,
-    FullName: 'Haley Forsythe',
-    Country: 'Papua New Guinea',
-    Role: 'Senior Quality Engineer',
-    Email: 'hforsythe1u@statcounter.com',
-  },
-  {
-    Id: 68,
-    FullName: 'Debor Penniell',
-    Country: 'Russia',
-    Role: 'Media Manager I',
-    Email: 'dpenniell1v@plala.or.jp',
-  },
-  {
-    Id: 69,
-    FullName: 'Trevar Brizell',
-    Country: 'China',
-    Role: 'Programmer Analyst I',
-    Email: 'tbrizell1w@cnn.com',
-  },
-  {
-    Id: 70,
-    FullName: 'Steward MIdson',
-    Country: 'China',
-    Role: 'Systems Administrator II',
-    Email: 'smIdson1x@ca.gov',
-  },
-  {
-    Id: 71,
-    FullName: 'Hubey de Broke',
-    Country: 'Japan',
-    Role: 'Graphic Designer',
-    Email: 'hde1y@state.tx.us',
-  },
-  {
-    Id: 72,
-    FullName: 'Brod Preddy',
-    Country: 'China',
-    Role: 'Physical Therapy Assistant',
-    Email: 'bpreddy1z@hc360.com',
-  },
-  {
-    Id: 73,
-    FullName: 'Stoddard Hare',
-    Country: 'Macedonia',
-    Role: 'Human Resources Manager',
-    Email: 'share20@miibeian.gov.cn',
-  },
-  {
-    Id: 74,
-    FullName: 'Bartholomeus Wiggin',
-    Country: 'Russia',
-    Role: 'Desktop Support Technician',
-    Email: 'bwiggin21@seesaa.net',
-  },
-  {
-    Id: 75,
-    FullName: 'Alic Plaskitt',
-    Country: 'Egypt',
-    Role: 'Office Assistant IV',
-    Email: 'aplaskitt22@deviantart.com',
-  },
-  {
-    Id: 76,
-    FullName: 'Darda Scholling',
-    Country: 'Gambia',
-    Role: 'Registered Nurse',
-    Email: 'dscholling23@apache.org',
-  },
-  {
-    Id: 77,
-    FullName: 'Alia Gecke',
-    Country: 'Serbia',
-    Role: 'Compensation Analyst',
-    Email: 'agecke24@google.com.au',
-  },
-  {
-    Id: 78,
-    FullName: 'Noami Learoyd',
-    Country: 'Mongolia',
-    Role: 'Quality Control Specialist',
-    Email: 'nlearoyd25@symantec.com',
-  },
-  {
-    Id: 79,
-    FullName: 'Ruy Whetland',
-    Country: 'Malaysia',
-    Role: 'Accountant IV',
-    Email: 'rwhetland26@hatena.ne.jp',
-  },
-  {
-    Id: 80,
-    FullName: 'Janel Colquete',
-    Country: 'Philippines',
-    Role: 'Marketing Assistant',
-    Email: 'jcolquete27@tinyurl.com',
-  },
-  {
-    Id: 81,
-    FullName: 'Nikolaus Wooder',
-    Country: 'Guatemala',
-    Role: 'Database Administrator II',
-    Email: 'nwooder28@jimdo.com',
-  },
-  {
-    Id: 82,
-    FullName: 'Oswald McColgan',
-    Country: 'China',
-    Role: 'Librarian',
-    Email: 'omccolgan29@last.fm',
-  },
-  {
-    Id: 83,
-    FullName: 'Eduino Pinchen',
-    Country: 'China',
-    Role: 'Staff Scientist',
-    Email: 'epinchen2a@blog.com',
-  },
-  {
-    Id: 84,
-    FullName: 'Lotta Simper',
-    Country: 'Brazil',
-    Role: 'Editor',
-    Email: 'lsimper2b@tinyurl.com',
-  },
-  {
-    Id: 85,
-    FullName: 'Florenza Boutflour',
-    Country: 'Ecuador',
-    Role: 'Marketing Assistant',
-    Email: 'fboutflour2c@independent.co.uk',
-  },
-  {
-    Id: 86,
-    FullName: 'Josy Mauditt',
-    Country: 'China',
-    Role: 'Senior Sales Associate',
-    Email: 'jmauditt2d@huffingtonpost.com',
-  },
-  {
-    Id: 87,
-    FullName: 'Perkin Hambleton',
-    Country: 'China',
-    Role: 'Librarian',
-    Email: 'phambleton2e@gravatar.com',
-  },
-  {
-    Id: 88,
-    FullName: 'Neala Teasey',
-    Country: 'China',
-    Role: 'Chemical Engineer',
-    Email: 'nteasey2f@arstechnica.com',
-  },
-  {
-    Id: 89,
-    FullName: 'Tanny Spolton',
-    Country: 'Thailand',
-    Role: 'GIS Technical Architect',
-    Email: 'tspolton2g@usgs.gov',
-  },
-  {
-    Id: 90,
-    FullName: 'Gaston Ledur',
-    Country: 'Portugal',
-    Role: 'Librarian',
-    Email: 'gledur2h@gravatar.com',
-  },
-  {
-    Id: 91,
-    FullName: 'Karola Roblou',
-    Country: 'Indonesia',
-    Role: 'GIS Technical Architect',
-    Email: 'kroblou2i@umich.edu',
-  },
-  {
-    Id: 92,
-    FullName: 'Etan Lamplough',
-    Country: 'Japan',
-    Role: 'Budget/Accounting Analyst IV',
-    Email: 'elamplough2j@cisco.com',
-  },
-  {
-    Id: 93,
-    FullName: 'Kerri Itzak',
-    Country: 'Nigeria',
-    Role: 'Senior Cost Accountant',
-    Email: 'kitzak2k@joomla.org',
-  },
-  {
-    Id: 94,
-    FullName: 'Catrina Lohering',
-    Country: 'Indonesia',
-    Role: 'Account Executive',
-    Email: 'clohering2l@xinhuanet.com',
-  },
-  {
-    Id: 95,
-    FullName: 'Willey Winterbotham',
-    Country: 'China',
-    Role: 'VP Marketing',
-    Email: 'wwinterbotham2m@hp.com',
-  },
-  {
-    Id: 96,
-    FullName: 'Casper Pelfer',
-    Country: 'Slovenia',
-    Role: 'Graphic Designer',
-    Email: 'cpelfer2n@techcrunch.com',
-  },
-  {
-    Id: 97,
-    FullName: 'Fonsie Duckels',
-    Country: 'Morocco',
-    Role: 'Developer II',
-    Email: 'fduckels2o@washingtonpost.com',
-  },
-  {
-    Id: 98,
-    FullName: 'Imelda Sculpher',
-    Country: 'Vietnam',
-    Role: 'Speech Pathologist',
-    Email: 'isculpher2p@example.com',
-  },
-  {
-    Id: 99,
-    FullName: 'Eduino Peare',
-    Country: 'Argentina',
-    Role: 'Pharmacist',
-    Email: 'epeare2q@smugmug.com',
-  },
-  {
-    Id: 100,
-    FullName: 'Hector Hubbucks',
-    Country: 'Argentina',
-    Role: 'Environmental Specialist',
-    Email: 'hhubbucks2r@springer.com',
-  },
+  }
 ];

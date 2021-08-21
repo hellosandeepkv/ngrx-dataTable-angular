@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { switchMap, map, catchError } from 'rxjs/operators';
 import {
@@ -16,14 +16,15 @@ import { UserService } from '../service/user.service';
 export class UserEffects {
   constructor(private service: UserService, private actions$: Actions) {}
 
-  @Effect()
-  public loadUsers$ = this.actions$.pipe(
-    ofType<UserLoadAction>(UserActionType.Loading),
-    map((action) => action.payload),
-    switchMap((params: UserParams) =>
-      this.service.getUsers(params).pipe(
-        map((response: UserResponse) => new UserLoadSuccessAction(response)),
-        catchError((error) => of(new UserLoadFailAction(error)))
+  public loadUsers$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType<UserLoadAction>(UserActionType.Loading),
+      map((action) => action.payload),
+      switchMap((params: UserParams) =>
+        this.service.getUsers(params).pipe(
+          map((response: UserResponse) => new UserLoadSuccessAction(response)),
+          catchError((error) => of(new UserLoadFailAction(error)))
+        )
       )
     )
   );
